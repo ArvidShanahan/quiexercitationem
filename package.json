@@ -1,0 +1,212 @@
+{
+  "name": "quiexercitationem",
+  "description": "The best job scheduler for Node.js and JavaScript with cron, dates, ms, later, and human-friendly support.  Works in Node v12.11.0+, uses worker threads to spawn sandboxed processes, and supports async/await, retries, throttling, concurrency, and cancelable promises (graceful shutdown).  Simple, fast, and lightweight.  Made for Forward Email and Lad.",
+  "version": "1.0.0",
+  "author": "KamrenHeathcote",
+  "ava": {
+    "files": [
+      "test/*.js",
+      "test/**/*.js",
+      "!test/jobs",
+      "!test/noIndexJobs"
+    ],
+    "verbose": true,
+    "require": [
+      "events.once/polyfill"
+    ]
+  },
+  "dependencies": {
+    "@breejs/later": "^4.1.0",
+    "boolean": "^3.1.4",
+    "combine-errors": "^3.0.3",
+    "cron-validate": "^1.4.3",
+    "debug": "^4.3.3",
+    "human-interval": "^2.0.1",
+    "is-string-and-not-blank": "^0.0.2",
+    "is-valid-path": "^0.1.1",
+    "ms": "^2.1.3",
+    "p-wait-for": "3",
+    "safe-timers": "^1.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@goto-bus-stop/envify": "^5.0.0",
+    "@sinonjs/fake-timers": "^8.1.0",
+    "@types/node": "^14.0.0",
+    "@types/safe-timers": "^1.1.0",
+    "ava": "latest",
+    "codecov": "latest",
+    "cross-env": "latest",
+    "delay": "^5.0.0",
+    "dtslint": "^4.2.1",
+    "eslint": "^8.5.0",
+    "eslint-config-xo-lass": "latest",
+    "eslint-plugin-compat": "^4.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "events.once": "^2.0.2",
+    "fixpack": "latest",
+    "husky": "^7.0.4",
+    "into-stream": "^7.0.0",
+    "lint-staged": "latest",
+    "nyc": "latest",
+    "remark-cli": "latest",
+    "remark-preset-github": "latest",
+    "unassertify": "^2.1.1",
+    "xo": "^0.47.0"
+  },
+  "engines": {
+    "node": ">= 12.11.0"
+  },
+  "files": [
+    "src",
+    "types/index.d.ts"
+  ],
+  "homepage": "https://github.com/ArvidShanahan/quiexercitationem.git",
+  "keywords": [
+    "velit",
+    "async",
+    "await",
+    "bee",
+    "bree",
+    "pariatur",
+    "impedit",
+    "cancel",
+    "molestiae",
+    "child",
+    "perspiciatis",
+    "cron",
+    "cronjob",
+    "crontab",
+    "numquam",
+    "dates",
+    "day",
+    "cumque",
+    "delay",
+    "qui",
+    "inventore",
+    "expression",
+    "dolores",
+    "illo",
+    "frequent",
+    "id",
+    "graceful",
+    "human",
+    "ullam",
+    "voluptas",
+    "job",
+    "rem",
+    "qui",
+    "koa",
+    "quia",
+    "lad",
+    "id",
+    "velit",
+    "ipsam",
+    "momentjs",
+    "mongo",
+    "sequi",
+    "accusamus",
+    "p-cancel",
+    "et",
+    "accusantium",
+    "similique",
+    "parser",
+    "pretty",
+    "process",
+    "processors",
+    "magnam",
+    "promises",
+    "perspiciatis",
+    "autem",
+    "readable",
+    "dolore",
+    "recurring",
+    "redis",
+    "redis",
+    "reload",
+    "restart",
+    "run",
+    "et",
+    "schedule",
+    "scheduler",
+    "setup",
+    "spawn",
+    "ea",
+    "praesentium",
+    "tasker",
+    "distinctio",
+    "timeout",
+    "timer",
+    "timers",
+    "translated",
+    "sit",
+    "reiciendis",
+    "voluptatum"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArvidShanahan/quiexercitationem.git"
+  },
+  "types": "types",
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "extends": [
+      "xo-lass"
+    ],
+    "ignore": [
+      "config.js"
+    ],
+    "rules": {
+      "capitalized-comments": "off",
+      "unicorn/catch-error-name": "off",
+      "unicorn/require-post-message-target-origin": "off",
+      "node/no-unsupported-features/node-builtins": [
+        "error",
+        {
+          "ignores": [
+            "events.once"
+          ]
+        }
+      ]
+    },
+    "overrides": [
+      {
+        "files": [
+          "test/jobs/*.js"
+        ],
+        "rules": {
+          "unicorn/no-process-exit": "off"
+        }
+      },
+      {
+        "files": [
+          "*.ts"
+        ],
+        "parserOptions": {
+          "project": [
+            "types/tsconfig.json"
+          ]
+        }
+      },
+      {
+        "files": [
+          "types/tests.ts"
+        ],
+        "rules": {
+          "@typescript-eslint/no-unused-vars": "off",
+          "@typescript-eslint/no-empty-function": "off",
+          "@typescript-eslint/no-unsafe-assignment": "off",
+          "@typescript-eslint/no-unsafe-call": "off"
+        }
+      }
+    ],
+    "parser": "@typescript-eslint/parser"
+  }
+}
